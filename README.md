@@ -1,8 +1,14 @@
-PHP library for the Ucam WebAuth (Raven) protocol
+PHP library for the Ucam WebAuth (Raven) protocol (version 3)
 =================================================
 
-[![Build Status](https://travis-ci.org/cambridgeuniversity/ucam-webauth-php.svg?branch=master)](https://travis-ci.org/cambridgeuniversity/ucam-webauth-php)
+This library is a fork of [https://github.com/cambridgeuniversity/ucam-webauth-php](https://github.com/cambridgeuniversity/ucam-webauth-php). The changes are:
 
+- `$PROTOCOL_VERSION` is changed from 1 to 3. As a result, 'Raven for life' users, i.e. alumni, can be authenticated with their Raven account. This is not possible with protocol version 3. Note that the `ptags` field in the reply indicates whether the Raven account is `current`, but this is not implemented here.
+
+- Some clean-up on the code is done.
+
+Original README
+=================================================
 The UcamWebauth PHP class provides an application agent for making
 authentication requests to a UcamWebauth server (such as Raven) that 
 can be called from PHP.
@@ -38,3 +44,5 @@ early 2008.
 This module is distributed under the terms of the GNU Lesser General
 Public License and is currently minimally maintained by UIS Raven
 Support (raven-support@ucs.cam.ac.uk).
+
+
