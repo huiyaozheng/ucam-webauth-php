@@ -29,7 +29,7 @@
 
 class Ucam_Webauth {
 
-  var $PROTOCOL_VERSION = '1';
+  var $PROTOCOL_VERSION = '3';
   var $SESSION_TICKET_VERSION = '1';
   var $DEFAULT_AUTH_SERVICE = 'https://raven.cam.ac.uk/auth/authenticate.html';
   var $DEFAULT_KEY_DIR = '/etc/httpd/conf/webauth_keys';
