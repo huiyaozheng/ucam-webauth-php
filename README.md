@@ -3,7 +3,7 @@ PHP library for the Ucam WebAuth (Raven) protocol (version 3)
 
 This library is a fork of [https://github.com/cambridgeuniversity/ucam-webauth-php](https://github.com/cambridgeuniversity/ucam-webauth-php). The changes are:
 
-- `$PROTOCOL_VERSION` is changed from 1 to 3. As a result, 'Raven for life' users, i.e. alumni, can be authenticated with their Raven account. This is not possible with protocol version 3. Note that the `ptags` field in the reply indicates whether the Raven account is `current`, but this is not implemented here.
+- `$PROTOCOL_VERSION` is changed from 1 to 3. As a result, 'Raven for life' users, i.e. alumni, can be authenticated with their Raven account. This is not possible with protocol version 1. Note that the `ptags` field in the reply indicates whether the Raven account is `current`, but this is not implemented here.
 
 - Some clean-up on the code is done.
 
