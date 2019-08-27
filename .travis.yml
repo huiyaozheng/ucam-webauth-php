@@ -1,7 +1,9 @@
 language: php
+
+dist: xenial
+
 php:
-  - '5.5'
   - '5.6'
-  - '7.0'
-  - '7.1'
+  - '7.3'
+
 script: phpunit tests/ucam_webauthTest.php
