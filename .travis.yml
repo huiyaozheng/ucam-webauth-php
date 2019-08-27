@@ -7,6 +7,6 @@ php:
   - '7.0'
 
 install:
-  - composer install --no-interaction
+  - composer update
 
 script: phpunit tests/ucam_webauthTest.php
