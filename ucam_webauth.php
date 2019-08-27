@@ -299,7 +299,9 @@ class Ucam_Webauth {
 
   function check_sig($data, $sig, $key_id) {
     // remove trailing slash from key_dir
-    if (substr($key_dir, -1) == '/') { $key_dir = substr($key_dir, 0, -1); }
+    if (substr($this->key_dir, -1) == '/') {
+      $this->key_dir = substr($this->key_dir, 0, -1);
+    }
     // Ensure keyid only contains digits (protect against path traversal)
     if (preg_match('/^[1-9][0-9]{0,7}$/', $key_id) !== 1) {
       error_log('Invalid key identifier in response message',0);
