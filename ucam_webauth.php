@@ -61,12 +61,13 @@ class Ucam_Webauth {
   var $WLS_TOKEN_ID = 4;
   var $WLS_TOKEN_URL = 5;
   var $WLS_TOKEN_PRINCIPAL = 6;
-  var $WLS_TOKEN_AUTH = 7;
-  var $WLS_TOKEN_SSO = 8;
-  var $WLS_TOKEN_LIFE = 9;
-  var $WLS_TOKEN_PARAMS = 10;
-  var $WLS_TOKEN_KEYID = 11;
-  var $WLS_TOKEN_SIG = 12;
+  var $WLS_TOKEN_PTAGS = 7;
+  var $WLS_TOKEN_AUTH = 8;
+  var $WLS_TOKEN_SSO = 9;
+  var $WLS_TOKEN_LIFE = 10;
+  var $WLS_TOKEN_PARAMS = 11;
+  var $WLS_TOKEN_KEYID = 12;
+  var $WLS_TOKEN_SIG = 13;
   
   var $do_session;
   var $cookie_key;
@@ -535,7 +536,7 @@ class Ucam_Webauth {
 	        $this->session_ticket[$this->SESSION_TICKET_MSG] = 'Unable to read issue time in authentication service reply';
 	        $this->session_ticket[$this->SESSION_TICKET_STATUS] = '600';
 	      } else if ($issue > $now + $this->clock_skew + 1) {
-	        $this->session_ticket[$this->SESSION_TICKET_MSG] = 'Authentication service reply aparently issued in the future: ' . $token[$this->WLS_TOKEN_ISSUE];
+	        $this->session_ticket[$this->SESSION_TICKET_MSG] = 'Authentication service reply apparently issued in the future: ' . $token[$this->WLS_TOKEN_ISSUE];
 	        $this->session_ticket[$this->SESSION_TICKET_STATUS] = '600';
 	      } else if ($now - $this->clock_skew - 1 > $issue + $this->response_timeout) {
 	        $this->session_ticket[$this->SESSION_TICKET_MSG] = 'Stale authentication service reply issue at ' . $token[$this->WLS_TOKEN_ISSUE];
