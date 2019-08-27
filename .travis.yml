@@ -9,4 +9,4 @@ php:
 before-script:
   - composer install
 
-script: .vendor/bin/phpunit tests/ucam_webauthTest.php
+script: ./vendor/bin/phpunit tests/ucam_webauthTest.php
