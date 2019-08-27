@@ -4,9 +4,6 @@ dist: xenial
 
 php:
   - '5.6'
-  - '7.0'
+  - '7.4'
 
-before-script:
-  - composer install
-
-script: ./vendor/bin/phpunit tests/ucam_webauthTest.php
+script: phpunit tests/ucam_webauthTest.php
