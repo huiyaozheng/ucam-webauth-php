@@ -25,7 +25,7 @@
 //
 // $Id: ucam_webauth.php,v 1.3 2013/04/11 21:48:55 jes91 Exp $
 //
-// Version 0.53
+// Version 1.01
 
 class Ucam_Webauth {
 
@@ -340,7 +340,7 @@ class Ucam_Webauth {
 
   function url() {
     $hostname = urlencode($this->hostname);
-    $port = $_SERVER{'SERVER_PORT'};
+    $port = $_SERVER['SERVER_PORT'];
     if ($this->using_https()) {
       $protocol = 'https://';
       if ($port == '443') $port = '';
